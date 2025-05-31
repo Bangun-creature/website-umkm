@@ -1,0 +1,656 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  position: relative;
+} */
+
+header {
+  /* border: 1px solid red; */
+  background-color: #fff;
+}
+
+.h-footer {
+  padding: 0rem 7%;
+  /* border: 1px solid black; */
+  /* background-color: rgb(245, 10, 10); */
+  background-color: #a52a2a;
+  border-bottom: 1px solid black;
+
+  display: grid;
+  grid-template-areas: "navbar-logo nav-list search-button";
+  grid-template-columns: 3fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+
+  .navbar-logo {
+    grid-area: navbar-logo;
+  }
+
+  .navbar-menu {
+    display: none;
+    grid-area: navbar-menu;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .navbar-list {
+    grid-area: nav-list;
+  }
+
+  .navbar-search {
+    grid-area: search-button;
+    cursor: pointer;
+  }
+
+  .navbar-list ul {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: 100%; */
+    list-style-type: none;
+
+    li {
+      /* background-color: green; */
+      height: 100%;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      /* background-color: rgb(23, 32, 42); */
+      background-color: rgba(23, 32, 42, 0.3);
+    }
+  }
+
+  .navbar-list ul li a {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    /* background-color: rgb(52, 73, 94); */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .navbar-logo h2 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .navbar-list ul li select {
+    background-color: transparent;
+  }
+
+  .navbar-list ul li a {
+    text-decoration: none;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem 0.2rem;
+  }
+
+  .navbar-list ul li select {
+    border: none;
+  }
+
+  .navbar-list ul li select option {
+    color: rgb(23, 32, 42);
+  }
+  .navbar-list ul li select option:hover {
+    background-color: rgb(23, 32, 42);
+    color: white;
+  }
+
+  .navbar-search {
+    display: grid;
+    justify-content: end;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+main {
+  position: relative;
+  background-color: #fff;
+  /* background-color: yellow; */
+}
+
+main .main-container {
+  /* position: relative; */
+  padding: 1.5rem 7%;
+  display: grid;
+  grid-template-areas:
+    "m-header m-header"
+    "m-main m-aside"
+    "m-footer m-footer";
+  /* Untuk mengatur lebar dari main : 65%, dan aside : 35% */
+  grid-template-columns: 1.8fr 1.2fr;
+  gap: 0.5rem;
+  /* Gimana caranya buat jaraknya hanya ada di antara kotaknya tidak diluarannya */
+
+  h2 {
+    color: rgb(23, 32, 42);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  p {
+    font-family: "Quicksand", serif;
+  }
+}
+
+.m-header {
+  grid-area: m-header;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "leftImage"
+    "headerFooter";
+  gap: 1rem;
+
+  .m-h-image-left {
+    width: 100%;
+    /* min-width: 100%; */
+  }
+
+  .m-h-image-left h2 {
+    color: rgb(0, 0, 0);
+  }
+
+  .m-h-image-left img {
+    width: 100%;
+    /* min-width: 100%; */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 1px 0px 2px 0px rgb(0, 0, 0, 0.2);
+  }
+
+  .m-h-footers {
+    grid-area: m-footer;
+
+    /* border: 1px solid rebeccapurple; */
+    /* padding: 0.5rem; */
+
+    .m-h-footers-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+
+      .m-h-footer-card {
+        border: 1px solid rgba(52, 73, 94, 0.1);
+        border-radius: 6px;
+        overflow: hidden;
+        transition: 0.4s;
+
+        .information {
+          .button-product {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            button {
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              /* box-shadow: 1px 1px 3px 0px rgb(0, 0, 0, 0.2); */
+              background-color: #a52a2a;
+              color: white;
+              padding: 0.4rem 0.8rem;
+              border-radius: 4px;
+              font-size: 0.8rem;
+            }
+          }
+
+          .text p {
+            padding: 0.2rem 0.8rem 0rem;
+          }
+        }
+      }
+
+      .m-h-footer-card:hover {
+        cursor: pointer;
+        border: 1px solid rgba(52, 73, 94, 0.3);
+      }
+    }
+
+    .m-h-footer-card img {
+      height: auto;
+      width: 100%;
+    }
+
+    .m-h-footer-card p {
+      padding: 0.2rem 0.8rem;
+    }
+  }
+}
+
+.m-header .m-h-image-left {
+  /* Agar otomatis warnanya contrast */
+
+  font-family: "Roboto", sans-serif;
+  grid-area: leftImage;
+
+  .overlay-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+
+    /* h1,
+    p {
+      color: #fff;
+      text-shadow: 0.1px 0.3px 2px rgba(0, 0, 0, 0.8);
+    } */
+  }
+
+  .overlay-container .overlay-text {
+    background-color: rgba(165, 42, 42, 0.6);
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.4); */
+    /* display: grid; */
+    border-radius: 6px;
+    width: 55%;
+    position: absolute;
+    top: 130px;
+    left: 50px;
+    padding: 1rem 2rem;
+    font-family: "Roboto", sans-serif;
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+      line-height: 1.025;
+      font-weight: 600;
+    }
+
+    p.text-hero-image {
+      color: white;
+      padding: 0.7rem 0;
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .button-order {
+      padding: 1rem 0;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+
+      button {
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        background-color: white;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+    }
+    /* margin: auto; */
+  }
+}
+
+.m-header .m-h-footers {
+  grid-area: headerFooter;
+}
+
+.m-main {
+  grid-area: m-main;
+
+  img {
+    height: auto;
+    width: 100%;
+    box-shadow: 1px 0px 2px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .m-main-content-desc {
+    padding: 1.5rem;
+
+    h2 {
+      /* border-bottom: 3px solid rgb(245, 10, 10); */
+
+      border-bottom: 2px solid #a52a2a;
+      width: fit-content;
+      transition: 0.1s;
+      line-height: 1;
+    }
+
+    p {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 200;
+      color: rgba(23, 32, 42, 1);
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+  }
+
+  .m-main-content-desc:hover h2 {
+    /* background-color: rgb(245, 10, 10); */
+    /* background-color: rgba(52, 73, 94); */
+    /* color: #fff; */
+    border-bottom: 2px solid rgba(165, 42, 42, 0.7);
+    cursor: pointer;
+  }
+}
+
+.m-aside {
+  grid-area: m-aside;
+
+  .profile {
+    .map {
+      width: 100%;
+      height: 410px;
+      border: none;
+      box-shadow: 1px 0px 2px 0px rgb(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+
+    .map:hover {
+      cursor: pointer;
+    }
+  }
+
+  .profile-detail {
+    padding: 1rem;
+  }
+
+  .news-title {
+    padding: 1rem;
+
+    .tombol-hubungi {
+      padding: 0.5rem 0;
+
+      button {
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        background-color: white;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .recent-news {
+    background-color: rgba(165, 42, 42);
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    h2,
+    p {
+      color: white;
+    }
+  }
+}
+
+.m-footers {
+  grid-area: m-footer;
+
+  .m-footers-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .m-footer-card img {
+    height: auto;
+    width: 100%;
+  }
+
+  .m-footer-card p {
+    padding: 1rem;
+  }
+}
+
+.m-footers .m-footer-card {
+  border: 1px solid rgba(52, 73, 94, 0.1);
+  border-radius: 6px;
+  height: fit-content;
+  overflow: hidden;
+  /* padding: 0.2rem; */
+  transition: 0.4s;
+}
+
+.m-footers .m-footer-card:hover {
+  cursor: pointer;
+  /* scale: 1.01; */
+  border: 1px solid rgba(52, 73, 94, 0.3);
+}
+
+/* Styling Information Icon */
+.main-container .overlay-text .information,
+.main-container .information-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-container .information-title {
+  padding: 0.5rem 1rem;
+}
+
+.main-container .m-header .m-h-footer-card .information {
+  span {
+    color: rgb(38, 52, 66);
+  }
+}
+
+.main-container .overlay-text .information,
+.main-container .information-title,
+.main-container .m-h-footer-card .information,
+.m-footers .m-footer-card .information {
+  p {
+    color: rgb(38, 52, 66);
+  }
+
+  .information-f {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+}
+
+.main-container .m-h-footer-card .information,
+.m-footers .m-footer-card .information {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  p {
+    padding: 0rem;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+  .f-header {
+    padding: 3.5rem 7%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* border: 1px solid rgb(29, 1, 1);
+     */
+    background-color: rgb(38, 52, 66);
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  .f-footer {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 1.5rem;
+    background-color: rgb(23, 32, 42);
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+  }
+}
+
+.space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet */
+@media screen and (max-width: 1240px) {
+  .h-footer {
+    padding: 1rem;
+    grid-template-areas:
+      "navbar-menu search-button"
+      "nav-list nav-list";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .h-footer .navbar-logo {
+    display: none;
+  }
+
+  .h-footer .navbar-menu {
+    display: flex;
+  }
+
+  .h-footer .navbar-list {
+    display: none;
+  }
+
+  .h-footer .navbar-list.active {
+    display: flex;
+  }
+
+  .h-footer .navbar-list ul {
+    /* display: none; */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: start;
+    /* background-color: aqua; */
+    gap: 0.5rem;
+    width: 100%;
+
+    li {
+      width: 100%;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+
+  main .main-container {
+    grid-template-areas:
+      "m-header"
+      "m-aside"
+      "m-main"
+      "m-footer";
+    grid-template-columns: 1fr;
+  }
+
+  .m-header .m-h-image-left {
+    .overlay-container .overlay-text {
+      width: 50%;
+      top: 10%;
+      left: 30px;
+      padding: 0.5rem 1rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p.text-hero-image {
+        padding: 0.4rem 0;
+        font-size: 0.8rem;
+      }
+
+      .button-order {
+        padding: 0.3rem 0;
+
+        button {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+/* HP */
+@media screen and (max-width: 576px) {
+  /* .m-header {
+    grid-template-areas:
+      "leftImage"
+      "headerFooter";
+    grid-template-columns: 1fr;
+  } */
+
+  .m-header .m-h-image-left {
+    .overlay-container .overlay-text {
+      width: 60%;
+      top: 8%;
+      left: 30px;
+      padding: 0.3rem 0.6rem;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p.text-hero-image {
+        padding: 0.2rem 0;
+        font-size: 0.6rem;
+      }
+
+      .button-order {
+        padding: 0.2rem 0;
+
+        button {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .m-aside {
+    .profile {
+      .map {
+        width: 75%;
+        height: 250px;
+      }
+    }
+  }
+
+  footer .f-header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
