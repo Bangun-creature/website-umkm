@@ -559,7 +559,7 @@ footer {
       .payment .payment-logo .logo-container {
         background-color: white;
         padding: 0.1rem;
-        border: 1px solid #a52a2a;
+        border: 1px solid rgba(52, 73, 94, 0.1);
         border-radius: 4px;
       }
 
