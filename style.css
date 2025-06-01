@@ -487,20 +487,98 @@ main .main-container {
 
 footer {
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2fr 0.5fr;
 
   .f-header {
-    padding: 3.5rem 7%;
+    padding: 3.5rem 7% 1rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "footer-left footer-right"
+      "footer-bottom footer-bottom";
     /* border: 1px solid rgb(29, 1, 1);
      */
     background-color: rgb(38, 52, 66);
     color: #fff;
     font-family: "Roboto", sans-serif;
 
-    p {
+    .f-h-first h2,
+    .f-h-second h2,
+    .f-h-third h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      padding: 0.7rem 0;
+    }
+
+    .f-h-first p,
+    .f-h-second ul li,
+    .f-h-third span.text {
+      font-size: 0.8rem;
       font-weight: 300;
+    }
+
+    .f-h-first {
+      grid-area: footer-left;
+      padding: 0 0 1.5rem;
+      width: 50%;
+    }
+
+    .f-h-second {
+      grid-area: footer-right;
+      padding: 0 0 1.5rem;
+
+      ul {
+        padding: 0 1rem;
+      }
+
+      ul li {
+        list-style-type: none;
+      }
+    }
+
+    .f-h-third {
+      grid-area: footer-bottom;
+      display: grid;
+      grid-template-columns: 2fr 0.6fr;
+      grid-template-areas: "payment media-social";
+
+      .payment {
+        grid-area: payment;
+      }
+
+      .media-social {
+        grid-area: media-social;
+      }
+
+      .payment-logo {
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .payment .payment-logo .logo-container {
+        background-color: white;
+        padding: 0.1rem;
+        border: 1px solid #a52a2a;
+        border-radius: 4px;
+      }
+
+      .payment .payment-logo .logo-container img {
+        height: 2rem;
+        width: auto;
+      }
+
+      .media-social .medsos-logo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .media-social .medsos-logo .icon-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
     }
   }
 
@@ -508,10 +586,10 @@ footer {
     display: grid;
     justify-content: center;
     align-content: center;
-    padding: 1.5rem;
     background-color: rgb(23, 32, 42);
     color: #fff;
     font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
     font-weight: 300;
   }
 }
