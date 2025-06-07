@@ -207,6 +207,15 @@ main .main-container p {
 
 .m-header .m-h-footers .m-h-footer-card p {
   padding: 0.2rem 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.m-header .m-h-footers .m-h-footer-card .information .text p,
+.m-footers .m-footer-card .information .text p {
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .m-header .m-h-image-left {
@@ -423,21 +432,17 @@ main .main-container p {
   gap: 0.5rem;
 }
 
-.main-container .overlay-text .information p,
-.main-container .information-title p,
-.main-container .m-h-footer-card .information p,
-.m-footers .m-footer-card .information p {
-  font-size: 0.7rem;
+.main-container .m-main .m-main-content-desc .information-title p {
+  font-size: 0.8rem;
   font-weight: 600;
   display: flex;
   align-items: center;
 }
 
-.main-container .overlay-text .information span,
-.main-container .information-title span,
-.main-container .m-h-footer-card .information span,
-.m-footers .m-footer-card .information span {
-  font-size: 1rem;
+.main-container .information-title span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.1rem;
   /* font-style: bold; */
 }
 
@@ -711,9 +716,19 @@ footer .f-footer p {
     font-size: 0.9rem;
   }
 
-  /* .main-main-content .m-main-content-desc .information-title p {
-    font-size: 0rem;
-  } */
+  .main-container .m-main .m-main-content-desc .information-title p {
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    /* align-items: center; */
+  }
+
+  .main-container .information-title span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 0.1rem;
+    /* font-style: bold; */
+  }
 
   .m-aside .profile .map {
     width: 75%;
