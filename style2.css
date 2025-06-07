@@ -328,7 +328,7 @@ main .main-container p {
 }
 
 .m-aside .news-title {
-  padding: 1rem;
+  padding: 1rem 1rem 0rem;
 }
 
 .m-aside .news-title .tombol-hubungi {
@@ -663,7 +663,7 @@ footer .f-footer p {
 
 @media screen and (max-width: 576px) {
   main .main-container h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .m-header .m-h-image-left .overlay-container .overlay-text {
@@ -695,11 +695,6 @@ footer .f-footer p {
     font-size: 1rem;
   }
 
-  .m-aside .profile .map {
-    width: 75%;
-    height: 250px;
-  }
-
   .m-header .m-h-footers .m-h-footer-card p {
     font-size: 0.8rem;
     padding: 0.1rem 0.6rem;
@@ -709,6 +704,36 @@ footer .f-footer p {
   .m-header .m-h-footers .m-h-footer-card .information .text p {
     padding: 0 0.8rem;
     font-size: 0.7rem;
+  }
+
+  .m-main .m-main-content-desc p {
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+  /* .main-main-content .m-main-content-desc .information-title p {
+    font-size: 0rem;
+  } */
+
+  .m-aside .profile .map {
+    width: 75%;
+    height: 250px;
+  }
+
+  .m-aside .profile-detail {
+    font-size: 0.8rem;
+  }
+
+  .m-aside .recent-news h2 {
+    font-size: 1rem;
+  }
+
+  .m-aside .recent-news p {
+    font-size: 0.8rem;
+  }
+
+  .m-aside .news-title .tombol-hubungi button {
+    font-size: 1rem;
   }
 
   footer .f-header {
