@@ -144,8 +144,22 @@ main .main-container p {
   gap: 1rem;
 }
 
+@keyframes mainHeaderAnimation {
+  to {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+
+  from {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 .m-header .m-h-image-left {
   width: 100%;
+  animation: mainHeaderAnimation;
+  animation-timeline: view(auto 90%);
 }
 
 .m-header .m-h-image-left h2 {
@@ -159,8 +173,22 @@ main .main-container p {
   box-shadow: 1px 0px 2px 0px rgb(0, 0, 0, 0.2);
 }
 
+@keyframes mainFooterAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 .m-header .m-h-footers {
   grid-area: m-footer;
+  animation-name: mainFooterAnimation;
+  animation-timeline: view(80% auto);
 }
 
 .m-header .m-h-footers .m-h-footers-content {
@@ -285,6 +313,23 @@ main .main-container p {
   grid-area: m-main;
 }
 
+@keyframes mMainAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.m-main .m-main-content {
+  animation-name: mMainAnimation;
+  animation-timeline: view(97% auto);
+}
+
 .m-main img {
   height: auto;
   width: 100%;
@@ -316,8 +361,23 @@ main .main-container p {
   cursor: pointer;
 }
 
+@keyframes mainAsideAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 .m-aside {
   grid-area: m-aside;
+  height: fit-content;
+  animation-name: mainAsideAnimation;
+  animation-timeline: view(97% auto);
 }
 
 .m-aside .profile .map {
@@ -370,8 +430,22 @@ main .main-container p {
   color: white;
 }
 
+@keyframes mFooterAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 .m-footers {
   grid-area: m-footer;
+  animation-name: mFooterAnimation;
+  animation-timeline: view(80% auto);
 }
 
 .m-footers .m-footers-content {
@@ -671,6 +745,23 @@ footer .f-footer p {
     font-size: 1.1rem;
   }
 
+  @keyframes mainHeaderAnimation {
+    to {
+      opacity: 0;
+      transform: translateY(40px) scale(0.9);
+    }
+
+    from {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  .m-header .m-h-image-left {
+    animation-name: mainHeaderAnimation;
+    animation-timeline: view(auto 100%);
+  }
+
   .m-header .m-h-image-left .overlay-container .overlay-text {
     width: 60%;
     top: 8%;
@@ -709,6 +800,23 @@ footer .f-footer p {
   .m-header .m-h-footers .m-h-footer-card .information .text p {
     padding: 0 0.8rem;
     font-size: 0.7rem;
+  }
+
+  @keyframes mFooterAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(100px) scale(0.9);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  .m-header .m-h-footers {
+    animation-name: mFooterAnimation;
+    animation-timeline: view(100% auto);
   }
 
   .m-main .m-main-content-desc p {
